@@ -16,16 +16,25 @@ namespace VertexFragment
     /// Used to add <see cref="PlayerControllerComponent"/> via the Editor.
     /// </summary>
     [Serializable]
-    public sealed class PlayerControllerComponentView : MonoBehaviour, IConvertGameObjectToEntity
+    public sealed class PlayerControllerComponentView : MonoBehaviour
     {
-        public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
+        public TransformUsageFlags TransformFlags = TransformUsageFlags.Dynamic;
+    }
+
+    /// <summary>
+    /// Used to bake <see cref="PlayerControllerComponent"/> onto <see cref="PlayerControllerComponentView"/>.
+    /// </summary>
+    public sealed class PlayerControllerComponentViewBaker : Baker<PlayerControllerComponentView>
+    {
+        public override void Bake(PlayerControllerComponentView authoring)
         {
-            if (!enabled)
+            if (!authoring.enabled)
             {
                 return;
             }
 
-            dstManager.AddComponentData(entity, new PlayerControllerComponent());
+            Entity entity = this.GetEntity(authoring.TransformFlags);
+            AddComponent(entity, new PlayerControllerComponent());
         }
     }
 }

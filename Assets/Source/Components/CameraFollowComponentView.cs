@@ -72,7 +72,7 @@ namespace VertexFragment
     /// Used to add <see cref="CameraFollowComponent"/> via the Editor.
     /// </summary>
     [Serializable]
-    public sealed class CameraFollowComponentView : MonoBehaviour, IConvertGameObjectToEntity
+    public sealed class CameraFollowComponentView : MonoBehaviour
     {
         public float Yaw = 0.0f;
         public float Pitch = 53.0f;
@@ -83,22 +83,31 @@ namespace VertexFragment
         public float MinZoom = 5.0f;
         public float MaxZoom = 10.0f;
 
-        public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
+        public TransformUsageFlags TransformFlags = TransformUsageFlags.Dynamic;
+    }
+
+    /// <summary>
+    /// Used to bake <see cref="CameraFollowComponent"/> onto <see cref="CameraFollowComponentView"/>.
+    /// </summary>
+    public sealed class CameraFollowComponentViewBaker : Baker<CameraFollowComponentView>
+    {
+        public override void Bake(CameraFollowComponentView authoring)
         {
-            if (!enabled)
+            if (!authoring.enabled)
             {
                 return;
             }
 
-            dstManager.AddComponentData(entity, new CameraFollowComponent()
+            Entity entity = this.GetEntity(authoring.TransformFlags);
+            AddComponent(entity, new CameraFollowComponent()
             {
-                MinPitch = MinPitch,
-                MaxPitch = MaxPitch,
-                MinZoom = MinZoom,
-                MaxZoom = MaxZoom,
-                Yaw = Yaw,
-                Pitch = Pitch,
-                Zoom = Zoom
+                MinPitch = authoring.MinPitch,
+                MaxPitch = authoring.MaxPitch,
+                MinZoom = authoring.MinZoom,
+                MaxZoom = authoring.MaxZoom,
+                Yaw = authoring.Yaw,
+                Pitch = authoring.Pitch,
+                Zoom = authoring.Zoom
             });
         }
     }

@@ -2,6 +2,7 @@
 using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
+using VertexFragment;
 
 namespace VertexFragment
 {
@@ -89,7 +90,7 @@ namespace VertexFragment
     /// Used to add <see cref="CharacterControllerComponent"/> via the Editor.
     /// </summary>
     [Serializable]
-    public sealed class CharacterControllerComponentView : MonoBehaviour, IConvertGameObjectToEntity
+    public sealed class CharacterControllerComponentView : MonoBehaviour
     {
         public float3 Gravity = new float3(0.0f, -22.0f, 0.0f);
         public float MaxSpeed = 7.5f;
@@ -98,22 +99,31 @@ namespace VertexFragment
         public float MaxStep = 0.35f;
         public float Drag = 0.2f;
 
-        public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
-        {
-            if (!enabled)
-            {
-                return;
-            }
+        public TransformUsageFlags TransformFlags = TransformUsageFlags.Dynamic;
+    }
+}
 
-            dstManager.AddComponentData(entity, new CharacterControllerComponent()
-            {
-                Gravity = Gravity,
-                MaxSpeed = MaxSpeed,
-                Speed = Speed,
-                JumpStrength = JumpStrength,
-                MaxStep = MaxStep,
-                Drag = Drag
-            });
+/// <summary>
+/// Used to bake <see cref="CharacterControllerComponent"/> onto <see cref="CharacterControllerComponentView"/>.
+/// </summary>
+public sealed class CharacterControllerComponentViewBaker : Baker<CharacterControllerComponentView>
+{
+    public override void Bake(CharacterControllerComponentView authoring)
+    {
+        if (!authoring.enabled)
+        {
+            return;
         }
+
+        Entity entity = this.GetEntity(authoring.TransformFlags);
+        AddComponent(entity, new CharacterControllerComponent()
+        {
+            Gravity = authoring.Gravity,
+            MaxSpeed = authoring.MaxSpeed,
+            Speed = authoring.Speed,
+            JumpStrength = authoring.JumpStrength,
+            MaxStep = authoring.MaxStep,
+            Drag = authoring.Drag
+        });
     }
 }

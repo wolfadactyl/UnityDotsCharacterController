@@ -1,4 +1,5 @@
 ﻿using Unity.Burst;
+using Unity.Burst.Intrinsics;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
@@ -14,7 +15,7 @@ namespace VertexFragment
     /// Is not physics-based, but uses physics to check for collisions.
     /// </summary>
     [UpdateInGroup(typeof(FixedStepSimulationSystemGroup)), UpdateAfter(typeof(ExportPhysicsWorld)), UpdateBefore(typeof(EndFramePhysicsSystem))]
-    public sealed class CharacterControllerSystem : JobComponentSystem
+    public sealed partial class CharacterControllerSystem : SystemBase
     {
         private const float Epsilon = 0.001f;
 
@@ -26,53 +27,48 @@ namespace VertexFragment
 
         protected override void OnCreate()
         {
-            buildPhysicsWorld = World.GetOrCreateSystem<BuildPhysicsWorld>();
-            exportPhysicsWorld = World.GetOrCreateSystem<ExportPhysicsWorld>();
-            endFramePhysicsSystem = World.GetOrCreateSystem<EndFramePhysicsSystem>();
+            buildPhysicsWorld = World.GetOrCreateSystemManaged<BuildPhysicsWorld>();
+            exportPhysicsWorld = World.GetOrCreateSystemManaged<ExportPhysicsWorld>();
+            endFramePhysicsSystem = World.GetOrCreateSystemManaged<EndFramePhysicsSystem>();
 
             characterControllerGroup = GetEntityQuery(new EntityQueryDesc
             {
                 All = new ComponentType[]
                 {
                     typeof(CharacterControllerComponent),
-                    typeof(Translation),
-                    typeof(Rotation),
+                    typeof(LocalTransform),
                     typeof(PhysicsCollider)
                 }
             });
         }
 
-        protected override JobHandle OnUpdate(JobHandle inputDeps)
+        protected override void OnUpdate()
         {
             if (characterControllerGroup.CalculateChunkCount() == 0)
             {
-                return inputDeps;
+                return;
             }
 
             var entityTypeHandle = GetEntityTypeHandle();
-            var colliderData = GetComponentDataFromEntity<PhysicsCollider>(true);
+            var colliderData = GetComponentLookup<PhysicsCollider>(true);
             var characterControllerTypeHandle = GetComponentTypeHandle<CharacterControllerComponent>();
-            var translationTypeHandle = GetComponentTypeHandle<Translation>();
-            var rotationTypeHandle = GetComponentTypeHandle<Rotation>();
+            var localTransformTypeHandle = GetComponentTypeHandle<LocalTransform>();
 
             var controllerJob = new CharacterControllerJob()
             {
-                DeltaTime = Time.DeltaTime,
+                DeltaTime = SystemAPI.Time.DeltaTime,
 
                 PhysicsWorld = buildPhysicsWorld.PhysicsWorld,
                 EntityHandles = entityTypeHandle,
                 ColliderData = colliderData,
                 CharacterControllerHandles = characterControllerTypeHandle,
-                TranslationHandles = translationTypeHandle,
-                RotationHandles = rotationTypeHandle
+                LocalTransformHandles = localTransformTypeHandle,
             };
 
-            var dependency = JobHandle.CombineDependencies(inputDeps, exportPhysicsWorld.GetOutputDependency());
+            var dependency = JobHandle.CombineDependencies(this.Dependency, exportPhysicsWorld.GetOutputDependency());
             var controllerJobHandle = controllerJob.ScheduleParallel(characterControllerGroup, dependency);
 
             endFramePhysicsSystem.AddInputDependency(controllerJobHandle);
-
-            return controllerJobHandle;
         }
 
         /// <summary>
@@ -85,32 +81,30 @@ namespace VertexFragment
 
             [ReadOnly] public PhysicsWorld PhysicsWorld;
             [ReadOnly] public EntityTypeHandle EntityHandles;
-            [ReadOnly] public ComponentDataFromEntity<PhysicsCollider> ColliderData;
+            [ReadOnly] public ComponentLookup<PhysicsCollider> ColliderData;
 
             public ComponentTypeHandle<CharacterControllerComponent> CharacterControllerHandles;
-            public ComponentTypeHandle<Translation> TranslationHandles;
-            public ComponentTypeHandle<Rotation> RotationHandles;
+            public ComponentTypeHandle<LocalTransform> LocalTransformHandles;
 
-            public void Execute(ArchetypeChunk chunk, int chunkIndex, int firstEntityIndex)
+            public void Execute(in ArchetypeChunk chunk, int unfilteredChunkIndex, bool useEnabledMask, in v128 chunkEnabledMask)
             {
                 var collisionWorld = PhysicsWorld.CollisionWorld;
 
                 var chunkEntityData = chunk.GetNativeArray(EntityHandles);
                 var chunkCharacterControllerData = chunk.GetNativeArray(CharacterControllerHandles);
-                var chunkTranslationData = chunk.GetNativeArray(TranslationHandles);
-                var chunkRotationData = chunk.GetNativeArray(RotationHandles);
+                var chunkLocalTransformData = chunk.GetNativeArray(LocalTransformHandles);
 
-                for (int i = 0; i < chunk.Count; ++i)
+                var enumerator = new ChunkEntityEnumerator(useEnabledMask, chunkEnabledMask, chunk.Count);
+                while (enumerator.NextEntityIndex(out var i))
                 {
                     var entity = chunkEntityData[i];
                     var controller = chunkCharacterControllerData[i];
-                    var position = chunkTranslationData[i];
-                    var rotation = chunkRotationData[i];
+                    var localTransform = chunkLocalTransformData[i];
                     var collider = ColliderData[entity];
 
-                    HandleChunk(ref entity, ref controller, ref position, ref rotation, ref collider, ref collisionWorld);
+                    HandleChunk(ref entity, ref controller, ref localTransform, ref collider, ref collisionWorld);
 
-                    chunkTranslationData[i] = position;
+                    chunkLocalTransformData[i] = localTransform;
                     chunkCharacterControllerData[i] = controller;
                 }
             }
@@ -120,15 +114,14 @@ namespace VertexFragment
             /// </summary>
             /// <param name="entity"></param>
             /// <param name="controller"></param>
-            /// <param name="position"></param>
-            /// <param name="rotation"></param>
+            /// <param name="transform"></param>
             /// <param name="collider"></param>
             /// <param name="collisionWorld"></param>
-            private void HandleChunk(ref Entity entity, ref CharacterControllerComponent controller, ref Translation position, ref Rotation rotation, ref PhysicsCollider collider, ref CollisionWorld collisionWorld)
+            private void HandleChunk(ref Entity entity, ref CharacterControllerComponent controller, ref LocalTransform localTransform, ref PhysicsCollider collider, ref CollisionWorld collisionWorld)
             {
                 float3 epsilon = new float3(0.0f, Epsilon, 0.0f) * -math.normalize(controller.Gravity);
-                float3 currPos = position.Value + epsilon;
-                quaternion currRot = rotation.Value;
+                float3 currPos = localTransform.Position + epsilon;
+                quaternion currRot = localTransform.Rotation;
 
                 float3 gravityVelocity = controller.Gravity * DeltaTime;
                 float3 verticalVelocity = (controller.VerticalVelocity + gravityVelocity);
@@ -161,7 +154,7 @@ namespace VertexFragment
                 CorrectForCollision(ref entity, ref currPos, ref currRot, ref controller, ref collider, ref collisionWorld);
                 DetermineIfGrounded(entity, ref currPos, ref epsilon, ref controller, ref collider, ref collisionWorld);
 
-                position.Value = currPos - epsilon;
+                localTransform.Position = currPos - epsilon;
             }
 
             /// <summary>

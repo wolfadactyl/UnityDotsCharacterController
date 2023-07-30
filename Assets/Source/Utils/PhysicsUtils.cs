@@ -61,7 +61,7 @@ namespace VertexFragment
             Entity ignore,
             CollisionFilter? filter = null,
             EntityManager? manager = null,
-            ComponentDataFromEntity<PhysicsCollider>? colliderData = null,
+            ComponentLookup<PhysicsCollider>? colliderData = null,
             Allocator allocator = Allocator.TempJob)
         {
             var allDistances = ColliderDistanceAll(collider, maxDistance, transform, ref collisionWorld, ignore, allocator);
@@ -138,7 +138,7 @@ namespace VertexFragment
             Entity ignore,
             CollisionFilter? filter = null,
             EntityManager? manager = null,
-            ComponentDataFromEntity<PhysicsCollider>? colliderData = null,
+            ComponentLookup<PhysicsCollider>? colliderData = null,
             Allocator allocator = Allocator.TempJob)
         {
             nearestHit = new ColliderCastHit();
@@ -226,7 +226,7 @@ namespace VertexFragment
         /// <param name="castResults"></param>
         /// <param name="entityManager"></param>
         /// <param name="filter"></param>
-        public unsafe static void TrimByFilter<T>(ref NativeList<T> castResults, EntityManager entityManager, CollisionFilter filter) where T : struct, IQueryResult
+        public unsafe static void TrimByFilter<T>(ref NativeList<T> castResults, EntityManager entityManager, CollisionFilter filter) where T : unmanaged, IQueryResult
         {
             for (int i = (castResults.Length - 1); i >= 0; --i)
             {
@@ -251,7 +251,7 @@ namespace VertexFragment
         /// <param name="castResults"></param>
         /// <param name="colliderData"></param>
         /// <param name="filter"></param>
-        public unsafe static void TrimByFilter<T>(ref NativeList<T> castResults, ComponentDataFromEntity<PhysicsCollider> colliderData, CollisionFilter filter) where T : struct, IQueryResult
+        public unsafe static void TrimByFilter<T>(ref NativeList<T> castResults, ComponentLookup<PhysicsCollider> colliderData, CollisionFilter filter) where T : unmanaged, IQueryResult
         {
             for (int i = (castResults.Length - 1); i >= 0; --i)
             {
@@ -274,7 +274,7 @@ namespace VertexFragment
         /// </summary>
         /// <param name="castResults"></param>
         /// <param name="ignore"></param>
-        public static void TrimByEntity<T>(ref NativeList<T> castResults, Entity ignore) where T : struct, IQueryResult
+        public static void TrimByEntity<T>(ref NativeList<T> castResults, Entity ignore) where T : unmanaged, IQueryResult
         {
             if (ignore == Entity.Null)
             {
@@ -296,7 +296,7 @@ namespace VertexFragment
         /// <typeparam name="T"></typeparam>
         /// <param name="castResults"></param>
         /// <param name="nearest"></param>
-        public static bool GetSmallestFractional<T>(ref NativeList<T> castResults, out T nearest) where T : struct, IQueryResult
+        public static bool GetSmallestFractional<T>(ref NativeList<T> castResults, out T nearest) where T : unmanaged, IQueryResult
         {
             nearest = default(T);
 

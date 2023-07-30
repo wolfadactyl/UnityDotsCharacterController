@@ -9,23 +9,22 @@ namespace VertexFragment
     /// Basic system which follows the entity with the <see cref="CameraFollowComponent"/>.
     /// </summary>
     [UpdateInGroup(typeof(FixedStepSimulationSystemGroup)), UpdateAfter(typeof(ExportPhysicsWorld)), UpdateBefore(typeof(EndFramePhysicsSystem))]
-    public sealed class CameraFollowSystem : ComponentSystem
+    public sealed partial class CameraFollowSystem : SystemBase
     {
         protected override void OnUpdate()
         {
             Entities.ForEach((
                 Entity entity,
-                ref Translation position,
-                ref Rotation rotation,
+                ref LocalTransform localTransform,
                 ref CameraFollowComponent camera) =>
             {
                 ProcessCameraInput(ref camera);
 
                 Vector3 currPos = Camera.main.transform.position;
-                Vector3 targetPos = new Vector3(position.Value.x, position.Value.y + 1.0f, position.Value.z);
+                Vector3 targetPos = new Vector3(localTransform.Position.x, localTransform.Position.y + 1.0f, localTransform.Position.z);
 
                 targetPos += (Camera.main.transform.forward * -camera.Zoom);
-                float posLerp = Mathf.Clamp(Time.DeltaTime * 8.0f, 0.0f, 1.0f);
+                float posLerp = Mathf.Clamp(SystemAPI.Time.DeltaTime * 8.0f, 0.0f, 1.0f);
 
                 Camera.main.transform.rotation = new Quaternion();
                 Camera.main.transform.Rotate(new Vector3(camera.Pitch, camera.Yaw, 0.0f));
