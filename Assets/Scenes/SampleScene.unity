@@ -37,8 +37,8 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.43975633, g: 0.4881823, b: 0.56839883, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -104,7 +104,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +117,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 26292755}
   - component: {fileID: 26292754}
   - component: {fileID: 26292753}
-  - component: {fileID: 26292752}
   m_Layer: 0
   m_Name: Block (5)
   m_TagString: Untagged
@@ -150,26 +149,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26292750}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -14.75, y: 1.75, z: 8.75}
   m_LocalScale: {x: 2, y: 1, z: 2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &26292752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26292750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &26292753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +180,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -234,72 +221,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -324,6 +311,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -362,6 +350,59 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26292750}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &28507324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 28507326}
+  - component: {fileID: 28507325}
+  m_Layer: 0
+  m_Name: AuthoringSubScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &28507325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28507324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a335734b1572644a6a5d09d87adc65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SceneAsset: {fileID: 102900000, guid: defde43a242f1224f91bd6faf7456516, type: 3}
+  _HierarchyColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  AutoLoadScene: 1
+  _SceneGUID:
+    Value:
+      x: 2739855341
+      y: 1109520962
+      z: 2943201695
+      w: 1633047679
+--- !u!4 &28507326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28507324}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &35800792
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +415,6 @@ GameObject:
   - component: {fileID: 35800797}
   - component: {fileID: 35800796}
   - component: {fileID: 35800795}
-  - component: {fileID: 35800794}
   m_Layer: 0
   m_Name: Wall (3)
   m_TagString: Untagged
@@ -389,26 +429,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35800792}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -9.799999, y: 0.25, z: -12.35}
   m_LocalScale: {x: 10, y: 3, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &35800794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 35800792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &35800795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,7 +460,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -473,72 +501,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -563,6 +591,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -613,7 +642,6 @@ GameObject:
   - component: {fileID: 138526176}
   - component: {fileID: 138526175}
   - component: {fileID: 138526174}
-  - component: {fileID: 138526173}
   m_Layer: 0
   m_Name: Block (7)
   m_TagString: Untagged
@@ -628,26 +656,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138526171}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11, y: 2.5, z: 11.5}
   m_LocalScale: {x: 2, y: 1, z: 2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &138526173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138526171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &138526174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,7 +687,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -712,72 +728,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -802,6 +818,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -852,7 +869,6 @@ GameObject:
   - component: {fileID: 152523406}
   - component: {fileID: 152523405}
   - component: {fileID: 152523404}
-  - component: {fileID: 152523403}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -867,26 +883,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152523401}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.5, y: 1, z: -4}
   m_LocalScale: {x: 5, y: 1, z: 5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &152523403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152523401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &152523404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,7 +914,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -951,72 +955,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -1041,6 +1045,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1084,6 +1089,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2017859919}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
@@ -1147,6 +1153,18 @@ PrefabInstance:
       value: Stairs (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 246305644}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 246305643}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 246305641}
   m_SourcePrefab: {fileID: 100100000, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
 --- !u!4 &246305639 stripped
 Transform:
@@ -1170,10 +1188,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b275e5f92732148048d7b77e264ac30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShapeType: 31
+  m_ShapeType: 0
   m_PrimitiveCenter:
     x: 0
-    y: 0.5
+    y: 0
     z: 0
   m_PrimitiveSize:
     x: 1
@@ -1181,7 +1199,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -1222,72 +1240,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -1301,19 +1319,56 @@ MonoBehaviour:
         Tag07: 0
     m_SerializedVersion: 1
   m_SerializedVersion: 1
---- !u!114 &246305642
-MonoBehaviour:
+--- !u!23 &246305643
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246305640}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8c4085ea8598aa043b57e11209fd092e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &246305644
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246305640}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &322776330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,7 +1381,6 @@ GameObject:
   - component: {fileID: 322776335}
   - component: {fileID: 322776334}
   - component: {fileID: 322776333}
-  - component: {fileID: 322776332}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -1341,26 +1395,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322776330}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.5, y: 1, z: -1.5}
   m_LocalScale: {x: 5, y: 1, z: 5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &322776332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 322776330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &322776333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1384,7 +1426,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -1425,72 +1467,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -1515,6 +1557,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1565,7 +1608,6 @@ GameObject:
   - component: {fileID: 424612233}
   - component: {fileID: 424612232}
   - component: {fileID: 424612234}
-  - component: {fileID: 424612231}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: Untagged
@@ -1580,26 +1622,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424612229}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.5, y: 0.5, z: 13}
   m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &424612231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424612229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!23 &424612232
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1611,6 +1641,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1661,7 +1692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b275e5f92732148048d7b77e264ac30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShapeType: 2
+  m_ShapeType: 0
   m_PrimitiveCenter:
     x: 0
     y: 0
@@ -1672,7 +1703,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -1804,7 +1835,6 @@ GameObject:
   - component: {fileID: 477217540}
   - component: {fileID: 477217539}
   - component: {fileID: 477217538}
-  - component: {fileID: 477217537}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -1819,26 +1849,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477217535}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 20, y: 2, z: 0}
   m_LocalScale: {x: 41, y: 3, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &477217537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477217535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &477217538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1862,7 +1880,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -1903,72 +1921,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -1993,6 +2011,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2043,7 +2062,6 @@ GameObject:
   - component: {fileID: 540903655}
   - component: {fileID: 540903654}
   - component: {fileID: 540903653}
-  - component: {fileID: 540903652}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -2058,26 +2076,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540903650}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -20, y: 2, z: 0}
   m_LocalScale: {x: 41, y: 3, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &540903652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 540903650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &540903653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2101,7 +2107,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -2142,72 +2148,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -2232,6 +2238,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2282,7 +2289,6 @@ GameObject:
   - component: {fileID: 592546992}
   - component: {fileID: 592546991}
   - component: {fileID: 592546990}
-  - component: {fileID: 592546989}
   m_Layer: 0
   m_Name: Wall (2)
   m_TagString: Untagged
@@ -2297,26 +2303,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592546987}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.799999, y: 0.25, z: -14.1}
   m_LocalScale: {x: 20, y: 3, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &592546989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 592546987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &592546990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2340,7 +2334,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -2381,72 +2375,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -2471,6 +2465,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2521,7 +2516,6 @@ GameObject:
   - component: {fileID: 606866361}
   - component: {fileID: 606866360}
   - component: {fileID: 606866359}
-  - component: {fileID: 606866358}
   m_Layer: 0
   m_Name: Block (8)
   m_TagString: Untagged
@@ -2536,26 +2530,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 606866356}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.25, y: 3.25, z: 11.5}
   m_LocalScale: {x: 2, y: 1, z: 2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &606866358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 606866356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &606866359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2579,7 +2561,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -2620,72 +2602,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -2710,6 +2692,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2834,18 +2817,20 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
+  serializedVersion: 2
   m_LocalRotation: {x: 0.55403227, y: -0.21201213, z: 0.14845248, w: 0.79124016}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 70, y: -30, z: 0}
 --- !u!1001 &721881753
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2017859919}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
@@ -2909,6 +2894,18 @@ PrefabInstance:
       value: Stairs (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 721881759}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 721881758}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 721881757}
   m_SourcePrefab: {fileID: 100100000, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
 --- !u!4 &721881754 stripped
 Transform:
@@ -2920,19 +2917,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
   m_PrefabInstance: {fileID: 721881753}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &721881756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721881755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &721881757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2945,10 +2929,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b275e5f92732148048d7b77e264ac30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShapeType: 31
+  m_ShapeType: 0
   m_PrimitiveCenter:
     x: 0
-    y: 0.5
+    y: 0
     z: 0
   m_PrimitiveSize:
     x: 1
@@ -2956,7 +2940,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -2997,72 +2981,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -3076,6 +3060,56 @@ MonoBehaviour:
         Tag07: 0
     m_SerializedVersion: 1
   m_SerializedVersion: 1
+--- !u!23 &721881758
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721881755}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8c4085ea8598aa043b57e11209fd092e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &721881759
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721881755}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &859993983
 GameObject:
   m_ObjectHideFlags: 0
@@ -3088,7 +3122,6 @@ GameObject:
   - component: {fileID: 859993988}
   - component: {fileID: 859993987}
   - component: {fileID: 859993986}
-  - component: {fileID: 859993985}
   m_Layer: 0
   m_Name: Block (1)
   m_TagString: Untagged
@@ -3103,26 +3136,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859993983}
+  serializedVersion: 2
   m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
   m_LocalPosition: {x: -6.5, y: -0.184, z: 4.412}
   m_LocalScale: {x: 5, y: 1, z: 5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
---- !u!114 &859993985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 859993983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &859993986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3146,7 +3167,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -3187,72 +3208,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -3277,6 +3298,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3327,7 +3349,6 @@ GameObject:
   - component: {fileID: 883865056}
   - component: {fileID: 883865055}
   - component: {fileID: 883865054}
-  - component: {fileID: 883865053}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -3342,26 +3363,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883865051}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.5, y: 2, z: -2}
   m_LocalScale: {x: 5, y: 1, z: 5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &883865053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883865051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &883865054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3385,7 +3394,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -3426,72 +3435,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -3516,6 +3525,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3594,9 +3604,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -3630,12 +3648,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5255229, y: -0.22024356, z: 0.14302768, w: 0.8092352}
+  m_LocalPosition: {x: 4.899034, y: 12.307464, z: -4.0550942}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1006587314
 GameObject:
@@ -3649,7 +3668,6 @@ GameObject:
   - component: {fileID: 1006587319}
   - component: {fileID: 1006587318}
   - component: {fileID: 1006587317}
-  - component: {fileID: 1006587316}
   m_Layer: 0
   m_Name: Block (9)
   m_TagString: Untagged
@@ -3664,26 +3682,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006587314}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.5, y: 4.75, z: 12.5}
   m_LocalScale: {x: 2, y: 1, z: 4}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1006587316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1006587314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &1006587317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3707,7 +3713,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -3748,72 +3754,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -3838,6 +3844,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3888,7 +3895,6 @@ GameObject:
   - component: {fileID: 1068847074}
   - component: {fileID: 1068847073}
   - component: {fileID: 1068847072}
-  - component: {fileID: 1068847075}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -3903,12 +3909,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068847070}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: 20}
   m_LocalScale: {x: 40, y: 3, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1068847072
 MonoBehaviour:
@@ -3933,7 +3940,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -3974,72 +3981,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -4064,6 +4071,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4102,19 +4110,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068847070}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1068847075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068847070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!1 &1125968721
 GameObject:
   m_ObjectHideFlags: 0
@@ -4127,7 +4122,6 @@ GameObject:
   - component: {fileID: 1125968726}
   - component: {fileID: 1125968725}
   - component: {fileID: 1125968724}
-  - component: {fileID: 1125968723}
   m_Layer: 0
   m_Name: Wall (1)
   m_TagString: Untagged
@@ -4142,26 +4136,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125968721}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.549999, y: -0.5, z: -12.1}
   m_LocalScale: {x: 20, y: 3, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1125968723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125968721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &1125968724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4185,7 +4167,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -4226,72 +4208,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -4316,6 +4298,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4366,7 +4349,6 @@ GameObject:
   - component: {fileID: 1188117690}
   - component: {fileID: 1188117689}
   - component: {fileID: 1188117688}
-  - component: {fileID: 1188117687}
   m_Layer: 0
   m_Name: Block (3)
   m_TagString: Untagged
@@ -4381,26 +4363,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188117685}
+  serializedVersion: 2
   m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
   m_LocalPosition: {x: 3.5, y: 1.3030127, z: 4}
   m_LocalScale: {x: 5, y: 1, z: 5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
---- !u!114 &1188117687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188117685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &1188117688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4424,7 +4394,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -4465,72 +4435,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -4555,6 +4525,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4605,7 +4576,6 @@ GameObject:
   - component: {fileID: 1197530800}
   - component: {fileID: 1197530799}
   - component: {fileID: 1197530798}
-  - component: {fileID: 1197530797}
   m_Layer: 0
   m_Name: Sphere (3)
   m_TagString: Untagged
@@ -4620,26 +4590,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197530795}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.25, y: 1.25, z: 13}
   m_LocalScale: {x: 7, y: 7, z: 7}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1197530797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1197530795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &1197530798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4652,7 +4610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b275e5f92732148048d7b77e264ac30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShapeType: 2
+  m_ShapeType: 0
   m_PrimitiveCenter:
     x: 0
     y: 0
@@ -4663,7 +4621,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -4794,6 +4752,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4837,6 +4796,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2017859919}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
@@ -4900,6 +4860,18 @@ PrefabInstance:
       value: Stairs (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1386052486}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1386052485}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1386052483}
   m_SourcePrefab: {fileID: 100100000, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
 --- !u!4 &1386052481 stripped
 Transform:
@@ -4923,10 +4895,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b275e5f92732148048d7b77e264ac30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShapeType: 31
+  m_ShapeType: 0
   m_PrimitiveCenter:
     x: 0
-    y: 0.5
+    y: 0
     z: 0
   m_PrimitiveSize:
     x: 1
@@ -4934,7 +4906,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -4975,72 +4947,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -5054,19 +5026,56 @@ MonoBehaviour:
         Tag07: 0
     m_SerializedVersion: 1
   m_SerializedVersion: 1
---- !u!114 &1386052484
-MonoBehaviour:
+--- !u!23 &1386052485
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386052482}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8c4085ea8598aa043b57e11209fd092e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1386052486
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386052482}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1639334819
 GameObject:
   m_ObjectHideFlags: 0
@@ -5079,7 +5088,6 @@ GameObject:
   - component: {fileID: 1639334824}
   - component: {fileID: 1639334823}
   - component: {fileID: 1639334822}
-  - component: {fileID: 1639334821}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -5094,26 +5102,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639334819}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.5, y: 1, z: 0}
   m_LocalScale: {x: 5, y: 1, z: 5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1639334821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1639334819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &1639334822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5137,7 +5133,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -5178,72 +5174,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -5268,6 +5264,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -5311,6 +5308,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2017859919}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
@@ -5370,6 +5368,18 @@ PrefabInstance:
       value: Stairs
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1646310969}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1646310968}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1646310966}
   m_SourcePrefab: {fileID: 100100000, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
 --- !u!4 &1646310964 stripped
 Transform:
@@ -5393,10 +5403,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b275e5f92732148048d7b77e264ac30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShapeType: 31
+  m_ShapeType: 0
   m_PrimitiveCenter:
     x: 0
-    y: 0.5
+    y: 0
     z: 0
   m_PrimitiveSize:
     x: 1
@@ -5404,7 +5414,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -5445,72 +5455,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -5524,24 +5534,62 @@ MonoBehaviour:
         Tag07: 0
     m_SerializedVersion: 1
   m_SerializedVersion: 1
---- !u!114 &1646310967
-MonoBehaviour:
+--- !u!23 &1646310968
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646310965}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8c4085ea8598aa043b57e11209fd092e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1646310969
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646310965}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1693676171
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2017859919}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
@@ -5605,6 +5653,18 @@ PrefabInstance:
       value: Stairs (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1693676177}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1693676176}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1693676174}
   m_SourcePrefab: {fileID: 100100000, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
 --- !u!4 &1693676172 stripped
 Transform:
@@ -5628,10 +5688,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b275e5f92732148048d7b77e264ac30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShapeType: 31
+  m_ShapeType: 0
   m_PrimitiveCenter:
     x: 0
-    y: 0.5
+    y: 0
     z: 0
   m_PrimitiveSize:
     x: 1
@@ -5639,7 +5699,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -5680,72 +5740,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -5759,19 +5819,56 @@ MonoBehaviour:
         Tag07: 0
     m_SerializedVersion: 1
   m_SerializedVersion: 1
---- !u!114 &1693676175
-MonoBehaviour:
+--- !u!23 &1693676176
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1693676173}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8c4085ea8598aa043b57e11209fd092e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1693676177
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693676173}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1694854718
 GameObject:
   m_ObjectHideFlags: 0
@@ -5784,7 +5881,6 @@ GameObject:
   - component: {fileID: 1694854722}
   - component: {fileID: 1694854721}
   - component: {fileID: 1694854720}
-  - component: {fileID: 1694854723}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -5799,12 +5895,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1694854718}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: -20}
   m_LocalScale: {x: 40, y: 3, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1694854720
 MonoBehaviour:
@@ -5829,7 +5926,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -5870,72 +5967,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -5960,6 +6057,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -5998,19 +6096,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1694854718}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1694854723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1694854718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!1 &1775712066
 GameObject:
   m_ObjectHideFlags: 0
@@ -6023,7 +6108,6 @@ GameObject:
   - component: {fileID: 1775712070}
   - component: {fileID: 1775712069}
   - component: {fileID: 1775712071}
-  - component: {fileID: 1775712068}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -6038,26 +6122,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775712066}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.25, y: -0.75, z: 13.25}
   m_LocalScale: {x: 4, y: 4, z: 4}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1775712068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775712066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!23 &1775712069
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6069,6 +6141,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -6119,7 +6192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b275e5f92732148048d7b77e264ac30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShapeType: 2
+  m_ShapeType: 0
   m_PrimitiveCenter:
     x: 0
     y: 0
@@ -6130,7 +6203,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -6262,7 +6335,6 @@ GameObject:
   - component: {fileID: 1794664636}
   - component: {fileID: 1794664635}
   - component: {fileID: 1794664634}
-  - component: {fileID: 1794664633}
   m_Layer: 0
   m_Name: Block (2)
   m_TagString: Untagged
@@ -6277,26 +6349,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794664631}
+  serializedVersion: 2
   m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
   m_LocalPosition: {x: -1.5, y: 0.52, z: 4.29}
   m_LocalScale: {x: 5, y: 1, z: 5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
---- !u!114 &1794664633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1794664631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &1794664634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6320,7 +6380,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -6361,72 +6421,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -6451,6 +6511,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -6501,7 +6562,6 @@ GameObject:
   - component: {fileID: 1806467779}
   - component: {fileID: 1806467778}
   - component: {fileID: 1806467777}
-  - component: {fileID: 1806467776}
   m_Layer: 0
   m_Name: Block (4)
   m_TagString: Untagged
@@ -6516,26 +6576,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806467774}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -14.75, y: 1, z: 6}
   m_LocalScale: {x: 2, y: 1, z: 2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1806467776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1806467774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &1806467777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6559,7 +6607,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -6600,72 +6648,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -6690,6 +6738,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -6739,7 +6788,6 @@ GameObject:
   - component: {fileID: 1858444637}
   - component: {fileID: 1858444636}
   - component: {fileID: 1858444635}
-  - component: {fileID: 1858444633}
   - component: {fileID: 1858444634}
   m_Layer: 0
   m_Name: Ground
@@ -6748,19 +6796,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1858444633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1858444632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &1858444634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6784,7 +6819,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -6825,37 +6860,37 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
@@ -6915,6 +6950,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -6960,12 +6996,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858444632}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1000, y: 1, z: 1000}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1900926040
 GameObject:
@@ -6979,7 +7016,6 @@ GameObject:
   - component: {fileID: 1900926045}
   - component: {fileID: 1900926044}
   - component: {fileID: 1900926043}
-  - component: {fileID: 1900926042}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -6994,26 +7030,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900926040}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.5, y: 2, z: 0}
   m_LocalScale: {x: 5, y: 3, z: 5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1900926042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1900926040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &1900926043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7037,7 +7061,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -7078,72 +7102,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -7168,6 +7192,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -7217,7 +7242,6 @@ GameObject:
   - component: {fileID: 1925045241}
   - component: {fileID: 1925045240}
   - component: {fileID: 1925045239}
-  - component: {fileID: 1925045242}
   - component: {fileID: 1925045244}
   - component: {fileID: 1925045243}
   - component: {fileID: 1925045245}
@@ -7241,7 +7265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b275e5f92732148048d7b77e264ac30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShapeType: 1
+  m_ShapeType: 0
   m_PrimitiveCenter:
     x: 0
     y: 0
@@ -7249,26 +7273,26 @@ MonoBehaviour:
   m_PrimitiveSize:
     x: 1
     y: 1
-    z: 2
+    z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -90
+      x: 0
       y: 0
-      z: 90
+      z: 0
     RotationOrder: 4
   m_Capsule:
-    Height: 2
+    Height: 1
     Radius: 0.5
     Axis: 2
   m_Cylinder:
-    Height: 2
+    Height: 1
     Radius: 0.5
     Axis: 2
   m_CylinderSideCount: 20
-  m_SphereRadius: 1
+  m_SphereRadius: 0.5
   m_MinimumSkinnedVertexWeight: 0.1
   m_ConvexHullGenerationParameters:
-    m_SimplificationTolerance: 0.03
+    m_SimplificationTolerance: 0.015
     m_BevelRadius: 0.05
     m_MinimumAngle: 2.5000002
   m_CustomMesh: {fileID: 0}
@@ -7278,7 +7302,7 @@ MonoBehaviour:
     m_Template: {fileID: 0}
     m_CollisionResponse:
       m_Override: 0
-      m_Value: 1
+      m_Value: 0
     m_Friction:
       m_Override: 0
       m_Value:
@@ -7292,38 +7316,38 @@ MonoBehaviour:
     m_BelongsToCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
@@ -7383,6 +7407,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -7428,26 +7453,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925045237}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.25, y: 20, z: -1.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1925045242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925045237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &1925045243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7469,6 +7482,7 @@ MonoBehaviour:
   JumpStrength: 9
   MaxStep: 0.35
   Drag: 0.2
+  TransformFlags: 2
 --- !u!114 &1925045244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7488,6 +7502,7 @@ MonoBehaviour:
   MaxPitch: 70
   MinZoom: 5
   MaxZoom: 10
+  TransformFlags: 2
 --- !u!114 &1925045245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7500,6 +7515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f564ab9f771fcdc43855723d0d558242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TransformFlags: 2
 --- !u!1 &1987613942
 GameObject:
   m_ObjectHideFlags: 0
@@ -7512,7 +7528,6 @@ GameObject:
   - component: {fileID: 1987613947}
   - component: {fileID: 1987613946}
   - component: {fileID: 1987613945}
-  - component: {fileID: 1987613944}
   m_Layer: 0
   m_Name: Block (6)
   m_TagString: Untagged
@@ -7527,26 +7542,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987613942}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -14.75, y: 2.5, z: 11.5}
   m_LocalScale: {x: 2, y: 1, z: 2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1987613944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987613942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &1987613945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7570,7 +7573,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -7611,72 +7614,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -7701,6 +7704,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -7744,6 +7748,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2017859919}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
@@ -7807,6 +7812,18 @@ PrefabInstance:
       value: Stairs (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1991869855}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1991869854}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1991869853}
   m_SourcePrefab: {fileID: 100100000, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
 --- !u!4 &1991869850 stripped
 Transform:
@@ -7818,19 +7835,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cd37d8f4c5a840947a4ce8184bee1004, type: 3}
   m_PrefabInstance: {fileID: 1991869849}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1991869852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1991869851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &1991869853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7843,10 +7847,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b275e5f92732148048d7b77e264ac30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShapeType: 31
+  m_ShapeType: 0
   m_PrimitiveCenter:
     x: 0
-    y: 0.5
+    y: 0
     z: 0
   m_PrimitiveSize:
     x: 1
@@ -7854,7 +7858,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -7895,72 +7899,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -7974,6 +7978,56 @@ MonoBehaviour:
         Tag07: 0
     m_SerializedVersion: 1
   m_SerializedVersion: 1
+--- !u!23 &1991869854
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991869851}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8c4085ea8598aa043b57e11209fd092e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1991869855
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991869851}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2017859918
 GameObject:
   m_ObjectHideFlags: 0
@@ -7997,9 +8051,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017859918}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1858444637}
   - {fileID: 1694854719}
@@ -8035,7 +8091,6 @@ Transform:
   - {fileID: 1006587315}
   - {fileID: 1197530796}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2040576967
 GameObject:
@@ -8049,7 +8104,6 @@ GameObject:
   - component: {fileID: 2040576971}
   - component: {fileID: 2040576970}
   - component: {fileID: 2040576972}
-  - component: {fileID: 2040576969}
   m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Untagged
@@ -8064,26 +8118,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040576967}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.25, y: 0, z: 13.25}
   m_LocalScale: {x: 4, y: 4, z: 4}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2040576969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2040576967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!23 &2040576970
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8095,6 +8137,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -8145,7 +8188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b275e5f92732148048d7b77e264ac30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShapeType: 2
+  m_ShapeType: 0
   m_PrimitiveCenter:
     x: 0
     y: 0
@@ -8156,7 +8199,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -8288,7 +8331,6 @@ GameObject:
   - component: {fileID: 2047619702}
   - component: {fileID: 2047619701}
   - component: {fileID: 2047619700}
-  - component: {fileID: 2047619699}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -8303,26 +8345,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2047619697}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.5, y: 1.5, z: 0}
   m_LocalScale: {x: 5, y: 2, z: 5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017859919}
-  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2047619699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047619697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &2047619700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8346,7 +8376,7 @@ MonoBehaviour:
     z: 1
   m_PrimitiveOrientation:
     Value:
-      x: -0
+      x: 0
       y: 0
       z: 0
     RotationOrder: 4
@@ -8387,72 +8417,72 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 1
-        Category01: 0
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CollidesWithCategories:
       m_Override: 0
       m_Value:
-        Category00: 0
+        Category00: 1
         Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
     m_CustomMaterialTags:
       m_Override: 0
       m_Value:
@@ -8477,6 +8507,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -8515,3 +8546,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2047619697}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 1925045241}
+  - {fileID: 963194228}
+  - {fileID: 705507995}
+  - {fileID: 2017859919}
+  - {fileID: 28507326}
