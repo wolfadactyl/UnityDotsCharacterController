@@ -8,7 +8,7 @@ namespace VertexFragment
     /// <summary>
     /// Basic system which follows the entity with the <see cref="CameraFollowComponent"/>.
     /// </summary>
-    [UpdateInGroup(typeof(FixedStepSimulationSystemGroup)), UpdateAfter(typeof(ExportPhysicsWorld)), UpdateBefore(typeof(EndFramePhysicsSystem))]
+    [UpdateInGroup(typeof(FixedStepSimulationSystemGroup)), UpdateAfter(typeof(ExportPhysicsWorld)), UpdateAfter(typeof(PhysicsSystemGroup))]
     public sealed partial class CameraFollowSystem : SystemBase
     {
         protected override void OnUpdate()
@@ -32,7 +32,7 @@ namespace VertexFragment
 
                 camera.Forward = Camera.main.transform.forward;
                 camera.Right = Camera.main.transform.right;
-            });
+            }).Schedule();
         }
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace VertexFragment
         /// </summary>
         /// <param name="camera"></param>
         /// <returns></returns>
-        private bool ProcessCameraInput(ref CameraFollowComponent camera)
+        private static bool ProcessCameraInput(ref CameraFollowComponent camera)
         {
             return ProcessCameraZoom(ref camera) ||
                    ProcessCameraYawPitch(ref camera);
@@ -51,17 +51,17 @@ namespace VertexFragment
         /// </summary>
         /// <param name="camera"></param>
         /// <returns></returns>
-        private bool ProcessCameraZoom(ref CameraFollowComponent camera)
+        private static bool ProcessCameraZoom(ref CameraFollowComponent camera)
         {
             float scroll = Input.GetAxis("Mouse Scroll Wheel");
 
-            if (!MathUtils.IsZero(scroll))
+            if (MathUtils.IsZero(scroll))
             {
-                camera.Zoom -= scroll;
-                return true;
+                return false;
             }
 
-            return false;
+            camera.Zoom -= scroll;
+            return true;
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace VertexFragment
         /// </summary>
         /// <param name="camera"></param>
         /// <returns></returns>
-        private bool ProcessCameraYawPitch(ref CameraFollowComponent camera)
+        private static bool ProcessCameraYawPitch(ref CameraFollowComponent camera)
         {
             if (MathUtils.IsZero(Input.GetAxis("Mouse 2")))
             {

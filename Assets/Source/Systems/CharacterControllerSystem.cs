@@ -14,23 +14,17 @@ namespace VertexFragment
     /// Base controller for character movement.
     /// Is not physics-based, but uses physics to check for collisions.
     /// </summary>
-    [UpdateInGroup(typeof(FixedStepSimulationSystemGroup)), UpdateAfter(typeof(ExportPhysicsWorld)), UpdateBefore(typeof(EndFramePhysicsSystem))]
+    [UpdateInGroup(typeof(FixedStepSimulationSystemGroup)), UpdateAfter(typeof(ExportPhysicsWorld)), UpdateAfter(typeof(PhysicsSystemGroup))]
     public sealed partial class CharacterControllerSystem : SystemBase
     {
         private const float Epsilon = 0.001f;
 
-        private BuildPhysicsWorld buildPhysicsWorld;
         private ExportPhysicsWorld exportPhysicsWorld;
-        private EndFramePhysicsSystem endFramePhysicsSystem;
 
         private EntityQuery characterControllerGroup;
 
         protected override void OnCreate()
         {
-            buildPhysicsWorld = World.GetOrCreateSystemManaged<BuildPhysicsWorld>();
-            exportPhysicsWorld = World.GetOrCreateSystemManaged<ExportPhysicsWorld>();
-            endFramePhysicsSystem = World.GetOrCreateSystemManaged<EndFramePhysicsSystem>();
-
             characterControllerGroup = GetEntityQuery(new EntityQueryDesc
             {
                 All = new ComponentType[]
@@ -58,17 +52,16 @@ namespace VertexFragment
             {
                 DeltaTime = SystemAPI.Time.DeltaTime,
 
-                PhysicsWorld = buildPhysicsWorld.PhysicsWorld,
+                PhysicsWorldSingleton = SystemAPI.GetSingleton<PhysicsWorldSingleton>(),
                 EntityHandles = entityTypeHandle,
                 ColliderData = colliderData,
                 CharacterControllerHandles = characterControllerTypeHandle,
                 LocalTransformHandles = localTransformTypeHandle,
             };
 
-            var dependency = JobHandle.CombineDependencies(this.Dependency, exportPhysicsWorld.GetOutputDependency());
-            var controllerJobHandle = controllerJob.ScheduleParallel(characterControllerGroup, dependency);
+            var controllerJobHandle = controllerJob.ScheduleParallel(characterControllerGroup, Dependency);
 
-            endFramePhysicsSystem.AddInputDependency(controllerJobHandle);
+            //PhysicsSystemGroup.Dependency.(controllerJobHandle);
         }
 
         /// <summary>
@@ -79,7 +72,7 @@ namespace VertexFragment
         {
             public float DeltaTime;
 
-            [ReadOnly] public PhysicsWorld PhysicsWorld;
+            [ReadOnly] public PhysicsWorldSingleton PhysicsWorldSingleton;
             [ReadOnly] public EntityTypeHandle EntityHandles;
             [ReadOnly] public ComponentLookup<PhysicsCollider> ColliderData;
 
@@ -88,11 +81,11 @@ namespace VertexFragment
 
             public void Execute(in ArchetypeChunk chunk, int unfilteredChunkIndex, bool useEnabledMask, in v128 chunkEnabledMask)
             {
-                var collisionWorld = PhysicsWorld.CollisionWorld;
+                var collisionWorld = PhysicsWorldSingleton.CollisionWorld;
 
                 var chunkEntityData = chunk.GetNativeArray(EntityHandles);
-                var chunkCharacterControllerData = chunk.GetNativeArray(CharacterControllerHandles);
-                var chunkLocalTransformData = chunk.GetNativeArray(LocalTransformHandles);
+                var chunkCharacterControllerData = chunk.GetNativeArray(ref CharacterControllerHandles);
+                var chunkLocalTransformData = chunk.GetNativeArray(ref LocalTransformHandles);
 
                 var enumerator = new ChunkEntityEnumerator(useEnabledMask, chunkEnabledMask, chunk.Count);
                 while (enumerator.NextEntityIndex(out var i))

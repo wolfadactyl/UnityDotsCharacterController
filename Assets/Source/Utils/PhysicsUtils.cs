@@ -234,7 +234,7 @@ namespace VertexFragment
                 {
                     PhysicsCollider collider = entityManager.GetComponentData<PhysicsCollider>(castResults[i].Entity);
 
-                    if (CollisionFilter.IsCollisionEnabled(filter, collider.ColliderPtr->Filter))
+                    if (CollisionFilter.IsCollisionEnabled(filter, collider.ColliderPtr->GetCollisionFilter()))
                     {
                         continue;
                     }
@@ -259,7 +259,7 @@ namespace VertexFragment
                 {
                     PhysicsCollider collider = colliderData[castResults[i].Entity];
 
-                    if (CollisionFilter.IsCollisionEnabled(filter, collider.ColliderPtr->Filter))
+                    if (CollisionFilter.IsCollisionEnabled(filter, collider.ColliderPtr->GetCollisionFilter()))
                     {
                         continue;
                     }

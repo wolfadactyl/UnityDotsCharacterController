@@ -16,7 +16,7 @@ namespace VertexFragment
                 ref CharacterControllerComponent controller) =>
             {
                 ProcessMovement(ref controller, ref camera);
-            });
+            }).Schedule();
         }
 
         /// <summary>
@@ -24,7 +24,7 @@ namespace VertexFragment
         /// </summary>
         /// <param name="controller"></param>
         /// <param name="camera"></param>
-        private void ProcessMovement(ref CharacterControllerComponent controller, ref CameraFollowComponent camera)
+        private static void ProcessMovement(ref CharacterControllerComponent controller, ref CameraFollowComponent camera)
         {
             float movementX = (Input.GetAxis("Move Right") > 0.0f ? 1.0f : 0.0f) + (Input.GetAxis("Move Left") > 0.0f ? -1.0f : 0.0f);
             float movementZ = (Input.GetAxis("Move Forward") > 0.0f ? 1.0f : 0.0f) + (Input.GetAxis("Move Backward") > 0.0f ? -1.0f : 0.0f);
