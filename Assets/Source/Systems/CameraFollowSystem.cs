@@ -13,12 +13,18 @@ namespace VertexFragment
     {
         protected override void OnUpdate()
         {
+            float scroll = Input.GetAxis("Mouse Scroll Wheel");
+            float mouse2 = Input.GetAxis("Mouse 2");
+            float mouseX = MathUtils.IsZero(mouse2) ? 0.0f : Input.GetAxis("Mouse X");
+            float mouseY = MathUtils.IsZero(mouse2) ? 0.0f : Input.GetAxis("Mouse Y");
+
             Entities.ForEach((
                 Entity entity,
                 ref LocalTransform localTransform,
                 ref CameraFollowComponent camera) =>
             {
-                ProcessCameraInput(ref camera);
+                ProcessCameraZoom(ref camera, scroll);
+                ProcessCameraYawPitch(ref camera, mouseX, mouseY);
 
                 Vector3 currPos = Camera.main.transform.position;
                 Vector3 targetPos = new Vector3(localTransform.Position.x, localTransform.Position.y + 1.0f, localTransform.Position.z);
@@ -32,54 +38,31 @@ namespace VertexFragment
 
                 camera.Forward = Camera.main.transform.forward;
                 camera.Right = Camera.main.transform.right;
-            }).Schedule();
-        }
-
-        /// <summary>
-        /// Handles all camera related input.
-        /// </summary>
-        /// <param name="camera"></param>
-        /// <returns></returns>
-        private static bool ProcessCameraInput(ref CameraFollowComponent camera)
-        {
-            return ProcessCameraZoom(ref camera) ||
-                   ProcessCameraYawPitch(ref camera);
+            }).WithoutBurst().Run();
         }
 
         /// <summary>
         /// Handles input for zooming the camera in and out.
         /// </summary>
         /// <param name="camera"></param>
-        /// <returns></returns>
-        private static bool ProcessCameraZoom(ref CameraFollowComponent camera)
+        private static void ProcessCameraZoom(ref CameraFollowComponent camera, float scroll)
         {
-            float scroll = Input.GetAxis("Mouse Scroll Wheel");
-
             if (MathUtils.IsZero(scroll))
             {
-                return false;
+                return;
             }
 
             camera.Zoom -= scroll;
-            return true;
         }
 
         /// <summary>
         /// Handles input for manipulating the camera yaw (rotating around).
         /// </summary>
         /// <param name="camera"></param>
-        /// <returns></returns>
-        private static bool ProcessCameraYawPitch(ref CameraFollowComponent camera)
+        private static void ProcessCameraYawPitch(ref CameraFollowComponent camera, float mouseX, float mouseY)
         {
-            if (MathUtils.IsZero(Input.GetAxis("Mouse 2")))
-            {
-                return false;
-            }
-
             camera.Yaw += Input.GetAxis("Mouse X");
             camera.Pitch -= Input.GetAxis("Mouse Y");
-
-            return true;
         }
     }
 }

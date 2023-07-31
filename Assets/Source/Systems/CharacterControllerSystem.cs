@@ -19,8 +19,6 @@ namespace VertexFragment
     {
         private const float Epsilon = 0.001f;
 
-        private ExportPhysicsWorld exportPhysicsWorld;
-
         private EntityQuery characterControllerGroup;
 
         protected override void OnCreate()
@@ -60,8 +58,7 @@ namespace VertexFragment
             };
 
             var controllerJobHandle = controllerJob.ScheduleParallel(characterControllerGroup, Dependency);
-
-            //PhysicsSystemGroup.Dependency.(controllerJobHandle);
+            Dependency = JobHandle.CombineDependencies(Dependency, controllerJobHandle);
         }
 
         /// <summary>
