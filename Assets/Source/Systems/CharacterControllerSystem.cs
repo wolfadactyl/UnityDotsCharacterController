@@ -14,7 +14,7 @@ namespace VertexFragment
     /// Base controller for character movement.
     /// Is not physics-based, but uses physics to check for collisions.
     /// </summary>
-    [UpdateInGroup(typeof(FixedStepSimulationSystemGroup)), UpdateAfter(typeof(ExportPhysicsWorld)), UpdateAfter(typeof(PhysicsSystemGroup))]
+    [UpdateInGroup(typeof(FixedStepSimulationSystemGroup)), UpdateAfter(typeof(PhysicsSystemGroup))]
     public sealed partial class CharacterControllerSystem : SystemBase
     {
         private const float Epsilon = 0.001f;

@@ -6,6 +6,7 @@ namespace VertexFragment
     /// <summary>
     /// Main control system for player input.
     /// </summary>
+    [UpdateInGroup(typeof(PresentationSystemGroup)), UpdateAfter(typeof(LateSimulationSystemGroup))]
     public partial class PlayerControllerSystem : SystemBase
     {
         protected override void OnUpdate()

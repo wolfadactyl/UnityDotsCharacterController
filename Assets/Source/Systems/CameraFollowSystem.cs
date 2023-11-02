@@ -8,7 +8,7 @@ namespace VertexFragment
     /// <summary>
     /// Basic system which follows the entity with the <see cref="CameraFollowComponent"/>.
     /// </summary>
-    [UpdateInGroup(typeof(FixedStepSimulationSystemGroup)), UpdateAfter(typeof(ExportPhysicsWorld)), UpdateAfter(typeof(PhysicsSystemGroup))]
+    [UpdateInGroup(typeof(FixedStepSimulationSystemGroup)), UpdateAfter(typeof(PhysicsSystemGroup))]
     public sealed partial class CameraFollowSystem : SystemBase
     {
         protected override void OnUpdate()
@@ -38,7 +38,7 @@ namespace VertexFragment
 
                 camera.Forward = Camera.main.transform.forward;
                 camera.Right = Camera.main.transform.right;
-            }).WithoutBurst().Run();
+            }).WithoutBurst().ScheduleParallel();
         }
 
         /// <summary>
